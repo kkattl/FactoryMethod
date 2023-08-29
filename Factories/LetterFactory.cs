@@ -17,7 +17,7 @@ namespace lab3.Factories
             Console.WriteLine("Enter information");
             document.Information = Console.ReadLine();
 
-            document.ToString();
+           
             document.Saving();
             return document;
         }

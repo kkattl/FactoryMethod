@@ -42,8 +42,23 @@ namespace lab3.Document
             string json = JsonConvert.SerializeObject(documentObject, Formatting.Indented);
 
           
-            string filePath = "Letter" + Number + ".json";
-            File.WriteAllText(filePath, json);
+            if (IsIncoming == true)
+            {
+                string folderPath = @"C:\Users\Admin\source\repos\lab3\Results\Letter\Incoming";
+                string fileName = "Letter" + Number + ".json";
+                string filePath = Path.Combine(folderPath, fileName);
+                File.WriteAllText(filePath, json);
+            }
+            else
+            {
+                string folderPath = @"C:\Users\Admin\source\repos\lab3\Results\Letter\Outgoing";
+                string fileName = "Letter" + Number + ".json";
+                string filePath = Path.Combine(folderPath, fileName);
+                File.WriteAllText(filePath, json);
+            }
+            
+
+           
 
         }
        

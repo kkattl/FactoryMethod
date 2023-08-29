@@ -47,8 +47,10 @@ namespace lab3.Document
           
             string json = JsonConvert.SerializeObject(documentObject, Formatting.Indented);
 
-          
-            string filePath = "Order" + Number + ".json";
+            string folderPath = @"C:\Users\Admin\source\repos\lab3\Results\Orders";
+            string fileName = "Order" + Number + ".json";
+            string filePath = Path.Combine(folderPath, fileName);
+
             File.WriteAllText(filePath, json);
         }
       

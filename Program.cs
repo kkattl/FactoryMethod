@@ -51,7 +51,7 @@ namespace lab3
                         Console.WriteLine("Incorect choose");
                         break;
                 }
-
+                Console.WriteLine(document.ToString());
                 Console.WriteLine();
             }
 

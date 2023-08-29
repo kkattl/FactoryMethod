@@ -37,7 +37,10 @@ namespace lab3.Document
             string json = JsonConvert.SerializeObject(documentObject, Formatting.Indented);
 
 
-            string filePath = "ResourceRequest" + Number + ".json";
+            string folderPath = @"C:\Users\Admin\source\repos\lab3\Results\ResourceRequest";
+            string fileName = "ResourceRequest" + Number + ".json";
+            string filePath = Path.Combine(folderPath, fileName);
+
             File.WriteAllText(filePath, json);
         }
 
